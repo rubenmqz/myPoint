@@ -5,7 +5,7 @@ import yargs    from 'yargs';
 import browser  from 'browser-sync';
 import gulp     from 'gulp';
 import panini   from 'panini';
-import rimraf   from 'rimraf';
+import del      from 'del';
 import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
@@ -34,8 +34,9 @@ gulp.task('default',
 
 // Delete the "dist" folder
 // This happens every time a build starts
+// It doesn't delete dist/server.py
 function clean(done) {
-  rimraf(PATHS.dist, done);
+  del(PATHS.distButServer).then(done());
 }
 
 // Copy files out of the assets folder
@@ -119,7 +120,8 @@ function images() {
 // Start a server with BrowserSync to preview the site in
 function server(done) {
   browser.init({
-    server: PATHS.dist, port: PORT
+    //server: PATHS.dist, port: PORT
+    proxy: "127.0.0.1:8000"  // actúa como proxy enviando las peticiones a sparrest
   });
   done();
 }

@@ -18,6 +18,10 @@ UNCSS_OPTIONS:
 PATHS:
   # Path to dist folder
   dist: "dist"  
+  # Paths to all files in dist, except server.py
+  distButServer:
+    - "dist/**/*.*"
+    - "!dist/server.py"
   # Paths to static assets that aren't images, CSS, or JavaScript
   assets:
     - "src/assets/**/*"
