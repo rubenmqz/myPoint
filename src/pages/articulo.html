@@ -1,0 +1,96 @@
+<div class="row">
+  <div class="large-12 columns">
+    <h1>Nombre del artículo</h1>
+  </div>
+</div> 
+
+<div class="row" id="content">
+  <div class="medium-8 columns">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos deserunt maxime unde alias vel obcaecati, aliquid in quia repellendus ducimus reiciendis veritatis incidunt cumque doloremque autem harum. Molestias, architecto, quas.</p>
+    <p>Omnis ab optio perspiciatis vitae placeat! Iusto earum nemo unde, fugiat tenetur vero cumque accusamus beatae iste soluta eius nihil, saepe adipisci. Perferendis quod, veritatis quia, optio repudiandae magnam vitae.</p>
+    <p>Explicabo nihil natus ipsa dolorem quas veniam incidunt, dignissimos, aliquid, quos cumque commodi expedita delectus sunt illum voluptatem. Dolorum sint inventore optio deserunt cumque, vel cum asperiores. Odit, ipsa, totam.</p>
+    <p>Facilis voluptate, placeat quis, nisi, iusto perferendis incidunt in aut ex aliquam rerum qui, similique assumenda amet quaerat sint dolore architecto quisquam dicta. Nisi libero aspernatur iure quibusdam, error inventore.</p>
+    <p>Ab illo pariatur quod nobis autem, at fugiat deserunt quia, repellendus quos accusantium ipsum. Itaque, consequatur. Est ullam dolorum et nobis, culpa officia explicabo, numquam soluta temporibus ad atque rerum.</p>
+    <p>Placeat reiciendis, velit officiis! Iste itaque nisi provident corporis odit eum iure ab tempora exercitationem. Totam laudantium laboriosam explicabo maxime provident iste odit quaerat, odio vitae itaque amet, nisi qui?</p>
+    <p>Laboriosam iusto nulla maxime pariatur vero numquam modi ipsa impedit. Sapiente tempore earum dolorem aut similique corrupti perspiciatis odit sunt, dolorum, magnam amet excepturi doloremque saepe! Nisi a magni sint.</p>
+    <p>Distinctio laboriosam assumenda atque sint tempora praesentium, laborum earum molestias corporis. Consequuntur nihil, debitis harum? Distinctio ipsum obcaecati fuga, accusamus dolorum facere error, dolorem tenetur, enim ullam nemo pariatur quae.</p>
+    <p>Esse veniam soluta ad natus a, totam dolorum temporibus impedit tenetur nobis quae qui ipsum cupiditate minima necessitatibus voluptatibus quaerat expedita commodi at delectus numquam. Quo eos tenetur, sint necessitatibus.</p>
+    <p>Aspernatur ea saepe error voluptatum deserunt fuga ipsam illum aut, iusto, dignissimos nemo, placeat mollitia autem provident quos natus porro. Autem, a ex tempore voluptatibus distinctio non nobis ad ut.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quas asperiores, tempora, tempore officia sunt ipsam. Ratione accusantium vitae eos cum dolore consectetur, vero error sed provident, ipsum pariatur, deleniti.
+  </div>
+  <div class="medium-4 columns" data-sticky-container>
+    <div class="sticky" data-sticky data-anchor="content">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="#">Skyler</a></li>
+        <li><a href="#">Jesse</a></li>
+        <li><a href="#">Mike</a></li>
+        <li><a href="#">Holly</a></li>
+      </ul>
+
+      <h4>Authors</h4>
+      <ul>
+        <li><a href="#">Skyler</a></li>
+        <li><a href="#">Jesse</a></li>
+        <li><a href="#">Mike</a></li>
+        <li><a href="#">Holly</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="large-12 columns">
+    <h2>Comentarios:</h2>
+  </div>
+</div>
+
+<section>
+  <div class="row" id="comments-content" data-article-id="10">
+    <div class="medium-8 columns">
+      <section class="comments-list">
+        <p>Aquí va la lista de comentarios</p>
+        <p>O la invitación a comentar si no hay</p>
+        <p>O el error de carga...</p>
+      </section>
+    </div>     
+
+    <div class="medium-4 columns">
+      <h3>Nuevo comentario:</h3>
+      <form class="new-comment-form" novalidate>
+        <div class="row">
+          <div class="large-12 columns">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Nombre" required value="Ruben" />
+          </div>
+
+          <div class="large-12 columns">
+            <label for="surname">Apellidos</label>
+            <input type="text" id="surname" name="surname" placeholder="Apellidos" required value="Márquez" />
+          </div>
+
+          <div class="large-12 columns">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="xxxx@xxxxx.xxx" required value="a@b.c" />
+          </div>
+
+          <div class="large-12 columns">
+            <label for="avatar" class="button small">Adjuntar foto (opcional) [TO DO]</label>
+            <input type="file" id="avatar" name="avatar" class="show-for-sr">
+          </div>
+          
+          <div class="large-12 columns">
+            <label for="comment">Comentario (máx. 120 palabras)</label>
+            <textarea id="comment" name="comment" rows="6" placeholder="Deja tu comentario sobre el artículo" required></textarea>
+          </div>
+
+          <div class="large-12 columns" id="form-messages"></div>
+
+          <button class="medium secondary button">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
