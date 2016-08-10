@@ -4,8 +4,6 @@
 @import 'foundation';
 @import 'motion-ui';
 
-@import 'articles';
-
 @include foundation-global-styles;
 @include foundation-grid;
 // @include foundation-flex-grid;
@@ -50,3 +48,9 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+
+@import 'header';
+@import 'footer';
+
+@import 'articles';

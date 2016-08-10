@@ -1,0 +1,54 @@
+.top-bar, .menu-bar, .top-bar ul {
+	background-color: $black;
+	color: $white;
+}
+
+.top-bar {
+	padding: 0.2rem 0.5rem 0.2rem 1.2rem;
+}
+
+.logo {
+	font-family: 'Delius', cursive;
+	font-size: 28px;
+	color: $light-gray;
+}
+
+.top-bar a {
+	color: $white;
+}
+
+.top-bar input {
+	margin-right: 0.7em;
+	margin-bottom: 0;
+	width: 100px;
+	height: auto;
+}
+
+.stripe {
+	
+	@extend .callout;
+	margin-bottom: 0rem;
+	background: url('../img/faces.jpg');
+	border-top: solid 6px $light-gray;
+	border-bottom: solid 6px $light-gray;
+
+	.eslogan {
+		@extend h1;
+		font-family: 'Gloria Hallelujah', cursive;
+
+		strong {
+			color: $primary-color;
+		}
+	}
+}
+
+.menu-bar {
+	@extend .top-bar;	
+	padding: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+.menu-bar, .menu-bar ul {
+	background-color: $dark-gray;
+}
+
