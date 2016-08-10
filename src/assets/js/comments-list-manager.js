@@ -36,15 +36,17 @@ var commentsListManager = (function() {
 		showWhenVisible: function () {
 			var self = this;
 			var shown = false;
-			$(window).on('DOMContentLoaded load resize scroll', function () {
-			    if (!shown) {
-				    if (utils.isElementInViewport($('#comments-content')[0])) {
-				        //if comments zone is visible, load the comments
-				        self.load(1);
-				        shown = true;
-				    }
-				}			    
-			}); 
+			if ($('#comments-content')[0]) {
+				$(window).on('DOMContentLoaded load resize scroll', function () {
+				    if (!shown) {
+					    if (utils.isElementInViewport($('#comments-content')[0])) {
+					        //if comments zone is visible, load the comments
+					        self.load(1);
+					        shown = true;
+					    }
+					}			    
+				}); 
+			}
 		}
 	}
 })();			
