@@ -117,11 +117,20 @@
         hours < 24 && substitute($l.hours, Math.round(hours)) ||
         hours < 42 && substitute($l.day, 1) ||
         days < 7 && "el " + weekDay(date.getDay()) + " pasado" ||
-        days < 30 && substitute($l.days, Math.round(days)) ||
+        "el " + 
+          utils.addZero(date.getDate()) + "/" + 
+          utils.addZero(date.getMonth()+1) + "/" + 
+          date.getFullYear() + 
+        " a las " +
+          utils.addZero(date.getHours()) + ":" + 
+          utils.addZero(date.getMinutes()) + ":" + 
+          utils.addZero(date.getSeconds());
+
+        /*days < 30 && substitute($l.days, Math.round(days)) ||
         days < 45 && substitute($l.month, 1) ||
         days < 365 && substitute($l.months, Math.round(days / 30)) ||
         years < 1.5 && substitute($l.year, 1) ||
-        substitute($l.years, Math.round(years));
+        substitute($l.years, Math.round(years));*/
 
       var separator = $l.wordSeparator || "";
       if ($l.wordSeparator === undefined) { separator = " "; }
