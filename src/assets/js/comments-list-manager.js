@@ -47,6 +47,17 @@ var commentsListManager = (function() {
 					}			    
 				}); 
 			}
+		},
+
+		getCount: function() {
+			$(".comments-count").each(function() {
+				var self = this;
+				apiClientComments.length($(this).data("articleId"), function(count) {
+					$(self).text("Comentarios: " + count);
+				}, function(response) {
+					$(self).text("Comentarios: --");
+				});
+			});
 		}
 	}
 })();			

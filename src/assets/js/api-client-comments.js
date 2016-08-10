@@ -41,11 +41,26 @@ var apiClientComments = (function () {
 
         list: function(articleId, successCallback, errorCallback) {
             //at the moment, articleId is ignored, since this backend (SparREST) doesn't support filtering results.
-            //so we get all comment, no matter which article they belong to
+            //so we get all comments, no matter which article they belong to
             $.ajax({
                 url: "/api/comments/",
                 method: "get",
                 success: successCallback,
+                error: errorCallback
+            });
+        },
+
+        length: function(articleId, successCallback, errorCallback) {
+            //at the moment, articleId is ignored, since this backend (SparREST) doesn't support filtering results.
+            //so we count all comments, no matter which article they belong to.
+            //Backend does not offer a "count" method, so we use "list", and count items retrieved
+            
+            $.ajax({
+                url: "/api/comments/",
+                method: "get",
+                success: function (response) {
+                    successCallback(response.length);
+                },
                 error: errorCallback
             });
         }
