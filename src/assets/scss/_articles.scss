@@ -3,8 +3,18 @@
 	margin-right:0;
 }
 
-.article-content .menu.simple .button {
+.like, .liked {
 	padding: 1em;
+}
+
+.like {
+	background-color: $white;
+    border: solid 1px map-get($foundation-palette, primary);
+    color: map-get($foundation-palette, primary);
+    font-weight: bold;
+    &:hover {
+    	background-color: map-get($foundation-palette, primary);
+    }
 }
 
 
