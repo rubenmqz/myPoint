@@ -2,7 +2,19 @@
 .full-article {
 	border-bottom: solid 3px map-get($foundation-palette, primary);
 	margin-bottom: 2em;
+
+	@include breakpoint(medium) {
+    	border-bottom: none;
+		margin-bottom: 0em;
+    }
+
+    aside {
+    	margin-bottom:1em;
+    }
+
 }
+
+
 
 .article-content .menu.simple li:last-child {
 	margin-right:0;
