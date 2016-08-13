@@ -7,14 +7,14 @@
 	padding: 0.2rem 0.5rem 0.2rem 1.2rem;
 }
 
-.logo {
+.top-bar a {
+	color: $white;
+}
+
+.logo a {
 	font-family: 'Delius', cursive;
 	font-size: 28px;
 	color: $light-gray;
-}
-
-.top-bar a {
-	color: $white;
 }
 
 .top-bar input {
