@@ -17,15 +17,16 @@ var commentsListManager = (function() {
 						}
 
 						var html = '<div class="row">';
+						html += '<div class="large-12 columns">';
 						html += '<article class="comment">';
 						html += '<header>';
 						html += '<img class="avatar" src="'+ avatar_url + '">';
-						html += '<div class="commenter">Por <a title="Enviar e-mail" href="mailto:' + utils.escapeHTML(comment.name) + '">' + utils.escapeHTML(comment.name) + ' ' + utils.escapeHTML(comment.surname) + '</a> <i>(<time class="comment_date" datetime="' + comment.datetime + '">' + utils.simplifyDates(comment.datetime) + '</time>)</i>:</div>';
+						html += '<div class="commenter">Por <a title="Enviar e-mail" href="mailto:' + utils.escapeHTML(comment.email) + '">' + utils.escapeHTML(comment.name) + ' ' + utils.escapeHTML(comment.surname) + '</a> <i>(<time class="comment_date" datetime="' + comment.datetime + '">' + utils.simplifyDates(comment.datetime) + '</time>)</i>:</div>';
 						html += '</header>';
 						html += '<div class="comment_text">' + utils.crlf2br(utils.escapeHTML(comment.comment)) + '</div>';
 						html += '</article>';
 						html += '</div>';
-
+						html += '</div>';
 						
 						$('.comments-list').append(html);					
 					}

@@ -1,4 +1,4 @@
-$(".article-content").on("click", "button.like", function(){
+$(".article-content").on("click", ".like", function(){
     var self = this;
     var articleId = $(this).data("articleId");
     apiClientLikes.like(articleId,1, function(response){
@@ -9,7 +9,7 @@ $(".article-content").on("click", "button.like", function(){
     });
 });
 
-$(".article-content").on("click", "button.liked", function(){
+$(".article-content").on("click", ".liked", function(){
     var self = this;
     var articleId = $(this).data("articleId");
     apiClientLikes.unlike(articleId,1, function(response){
@@ -18,5 +18,5 @@ $(".article-content").on("click", "button.liked", function(){
     }, function(response){
         console.error("Error while unliking article", response);
     });
-    $(self).blur();//avoid button being focused after click
+    //$(self).blur();//avoid button being focused after click
 });

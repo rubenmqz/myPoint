@@ -1,4 +1,9 @@
 //Articles List
+.full-article {
+	border-bottom: solid 3px map-get($foundation-palette, primary);
+	margin-bottom: 2em;
+}
+
 .article-content .menu.simple li:last-child {
 	margin-right:0;
 }
@@ -14,6 +19,10 @@
     font-weight: bold;
     &:hover {
     	background-color: map-get($foundation-palette, primary);
+    }
+    &:focus {
+    	background-color: $white;
+    	color: map-get($foundation-palette, primary);
     }
 }
 

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Foundation for Sites</title>
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Delius" rel="stylesheet">
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
@@ -33,10 +33,14 @@
         </div>
       </div>
 
-      <div class="menu-bar">
+      <div class="title-bar" data-responsive-toggle="categories-menu" data-hide-for="large">
+        <button class="menu-icon" type="button" data-toggle></button>
+        <div class="title-bar-title">Menu</div>
+      </div>
+      <div class="menu-bar" id="categories-menu">
         <div class="top-bar-left">
           <nav>
-            <ul class="menu">
+            <ul class="vertical large-horizontal menu">
               <li><a href="#">Economía</a></li>
               <li><a href="#">Ciencia</a></li>
               <li><a href="#">Tecnología</a></li>          
